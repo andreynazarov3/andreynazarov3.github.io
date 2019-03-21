@@ -67,7 +67,7 @@ export default {
 				{
           img: {
             src: "./images/lumpur.jpg",
-            placeholder: "./images/lumpur-small.jpg"
+            placeholder: "./images/lumpur-small2.jpg"
 					},
 				}
       ]
