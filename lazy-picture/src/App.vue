@@ -25,11 +25,14 @@
       }
     </pre>
     <lazy-picture :picture-sources="sources[0].picture" lazy />
+		<h2>Just img tag</h2>
+		<lazy-picture :img-sources="sources[1].img" lazy />
+		<lazy-picture :img-sources="sources[2].img" lazy />
   </div>
 </template>
 
 <script>
-import lazyPicture from "./components/LazyPicture.vue";
+import lazyPicture from "vue-lazy-picture";
 
 export default {
   name: "app",
@@ -40,10 +43,6 @@ export default {
     return {
       sources: [
         {
-          // img: {
-          //   src: "./images/New_york_times_square-terabass.jpg",
-          //   placeholder: "./images/rsz_new_york_times_square-terabass-small.jpg"
-          // },
           picture: [
             {
               media: "(max-width: 480px)",
@@ -58,7 +57,19 @@ export default {
                 "./images/rsz_new_york_times_square-terabass-small.jpg"
             }
           ]
-        }
+				},
+				{
+          img: {
+            src: "./images/moscow.jpg",
+            placeholder: "./images/moscow-small.jpg"
+					},
+				},
+				{
+          img: {
+            src: "./images/lumpur.jpg",
+            placeholder: "./images/lumpur-small.jpg"
+					},
+				}
       ]
     };
   }
